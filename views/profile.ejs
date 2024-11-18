@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <title>Plant Growth Site</title>
+    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container-for-profile-ejs">
+
+    <div class="page-header-for-profile-ejs text-center">
+        <h1 class="h1-in-profile-ejs"><span class="fa fa-anchor"></span> Profile Page</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <!-- <div class="col-sm-6">
+            <div class="well">
+                <h3><span class="fa fa-user"></span> Local</h3>
+
+                <% if (user.local.email) { %>
+                    <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %>
+                    </p>
+
+                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                <% } else { %>
+                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                <% } %>
+
+            </div> -->
+        </div>
+        <div class="col-sm-6">
+          <h3 class="h3-for-profile-ejs">Watered</h3>
+          <ul class="updating">
+            <% for(var i=0; i<updating.length; i++) {%>
+             <% if (updating[i].watered == true) { %>
+              <li class="message">
+                <span><%= updating[i].plantName %></span>
+                <span><i class="fa fa-check-circle" aria-hidden="true"></i></span>
+                <span><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+              </li>
+          <% } %>
+            <% } %>
+            </ul>
+          
+          <h3 class="h3-for-profile-ejs">Not watered</h3>
+          <ul class="updating">
+            <% for(var i=0; i<updating.length; i++) {%>
+             <% if (updating[i].watered == false) { %>
+              <li class="message">
+                <span><%= updating[i].plantName %></span>
+                <span><i class="fa fa-check-circle-o" aria-hidden="true"></i></span>
+                <span><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+              </li>
+          <% } %>
+            <% } %>
+            </ul>
+
+            
+
+
+          <h2 class="h2-for-profile-ejs">Add an update</h2>
+        <% if (user.local.email) { %>
+          <form action="/updating" method="POST">
+            <input type="text" name="plantName" placeholder="Name">
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <% } %>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
