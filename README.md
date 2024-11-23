@@ -6,7 +6,10 @@ This full-stack application helps users keep track of their plant watering sched
 
 
 
-![Screenshot 2024-11-18 at 7 09 37 PM](https://github.com/user-attachments/assets/f7a30f30-b561-4d6e-9714-b8f1fd267f09)
+![Screenshot 2024-11-22 at 8 59 40 PM](https://github.com/user-attachments/assets/cbcc42fd-bf68-4377-8e1c-ba039b936603)
+![Screenshot 2024-11-22 at 9 00 26 PM](https://github.com/user-attachments/assets/e4c07110-1ae1-4ce6-89ae-e3fb2faaed4b)
+
+
 
 Features
 
